@@ -1,0 +1,36 @@
+.jvr--node {
+    display: inline-block;
+    width: 0;
+    margin: 2px;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 3.5px 0 3.5px;
+    border-color: var(--jvr-color-triangle) transparent transparent transparent;
+    transition: transform 0.3s, border-color 0.4s;
+    transform: rotate(-90deg);
+}
+.jvr--toggle:hover .jvr--node {
+    border-color: var(--jvr-color-hover-triangle) transparent transparent transparent;
+}
+.jvr--node.jvr--opened {
+    transform: rotate(0deg);
+}            
+.jvr--watermark {
+    font-size: smaller;
+    color: gray;
+    margin-left: 10px;
+}        
+.jvr--invisible {
+    opacity: 0;
+}
+jvr--container {
+    margin-left: var(--jvr-child-padding);
+}    
+jvr--container.root {
+    margin-left: 0px;
+}
+:root {
+    --jvr-color-triangle: lightgray;
+    --jvr-color-hover-triangle: darkred;
+    --jvr-child-padding: 15px;
+}
