@@ -20,8 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "do publish test": "npm run typescript && npm run copy &&  npm publish --dry-run",
-    "do publish": "npm run typescript && npm run copy && npm publish",
+    "do publish test": "npm run typescript && npm run copy && npm publish --dry-run",
+    "do publish": "npm run typescript && npm publish",
     "typescript": "tsc -p src/component",
     "copy": "cp src/component/JsonView.css dist/"
 },

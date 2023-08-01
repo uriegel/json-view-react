@@ -1,7 +1,8 @@
-import ObjectView from "./ObjectView"
+import React from 'react'
 import "./JsonView.css"
-import ValueView from "./ValueView"
-import ArrayView from "./ArrayView"
+import { ArrayView } from "./ArrayView"
+import { ObjectView } from "./ObjectView"
+import { ValueView } from "./ValueView"
 
 function isObject(value: any) {
     return !isArray(value) && value instanceof Object
@@ -20,17 +21,14 @@ export interface DataProps {
     keyName?: string
 }
 
-const JsonView = ({data, keyName}: DataProps) => {
+const JsonView = ({data, keyName}: DataProps) => 
 
-    console.log("dk", data, keyName)
-
-    return isArray(data)
+    isArray(data)
         ? (<ArrayView data={data} keyName={keyName}/>)
         : isObject(data)
         ? (<ObjectView data={data} keyName={keyName}/>)
         : isValue(data)
         ? (<ValueView data={data} keyName={keyName} />)
         : null
-}
 
 export default JsonView

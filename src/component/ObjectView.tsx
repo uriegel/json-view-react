@@ -1,7 +1,7 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import JsonView, { DataProps } from "."
 
-const ObjectView = ({ data, keyName }: DataProps) => {
+export const ObjectView = ({ data, keyName }: DataProps) => {
 
     const [opened, setOpened] = useState(false)
 
@@ -29,4 +29,3 @@ const ObjectView = ({ data, keyName }: DataProps) => {
     )
 }
 
-export default ObjectView

@@ -1,6 +1,6 @@
-import { DataProps } from "."
+import React, { DataProps } from "."
 
-const ValueView = ({data, keyName}: DataProps) => (
+export const ValueView = ({data, keyName}: DataProps) => (
     <div>
         <div className={`jvr--node jvr--invisible`}></div>
         <span>{keyName}</span>       
@@ -9,4 +9,3 @@ const ValueView = ({data, keyName}: DataProps) => (
     </div>    
 )
 
-export default ValueView
