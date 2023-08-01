@@ -1,5 +1,7 @@
 import ObjectView from "./ObjectView"
 import "./JsonView.css"
+import ValueView from "./ValueView"
+import ArrayView from "./ArrayView"
 
 function isObject(value: any) {
     return !isArray(value) && value instanceof Object
@@ -13,49 +15,21 @@ function isValue(value: any) {
     return !isObject(value) && !isArray(value)
 }        
 
-const jason = {
-	name: "Uwe Riegel",
-	a: "A",
-	count: 123,
-	object: {
-		nummer: 8908998,
-        users: [
-            { name: "Uwe", email: "uriegel@hotmail.de" },
-            { name: "Paul", email: "paul@hotmail.de" },
-            { name: "Masta Killa", email: "masta@hotmail.de" }
-		],
-		items: [
-			12, 34, 45, 657, 768, 789, 890, 
-		],
-        name: "Objektname"
-	},
-	b: "B"
-}
-
-interface DataProps {
+export interface DataProps {
     data: any
+    keyName?: string
 }
 
-const ArrayView = ({data}: DataProps) => {
-    return (
-        <div>Hallo Array</div>
-    )
-}
+const JsonView = ({data, keyName}: DataProps) => {
 
-const ValueView = ({data}: DataProps) => {
-    return (
-        <div>Hallo Value</div>
-    )
-}
+    console.log("dk", data, keyName)
 
-const JsonView = () => {
-
-    return isArray(jason)
-        ? (<ArrayView data={jason}/>)
-        : isObject(jason)
-        ? (<ObjectView data={jason}/>)
-        : isValue(jason)
-        ? (<ValueView data={jason}/>)
+    return isArray(data)
+        ? (<ArrayView data={data} keyName={keyName}/>)
+        : isObject(data)
+        ? (<ObjectView data={data} keyName={keyName}/>)
+        : isValue(data)
+        ? (<ValueView data={data} keyName={keyName} />)
         : null
 }
 

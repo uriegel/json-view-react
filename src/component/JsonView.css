@@ -23,10 +23,10 @@
 .jvr--invisible {
     opacity: 0;
 }
-jvr--container {
+.jvr--container {
     margin-left: var(--jvr-child-padding);
 }    
-jvr--container.root {
+.jvr--container.jvr--root {
     margin-left: 0px;
 }
 :root {
