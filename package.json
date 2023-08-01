@@ -1,6 +1,6 @@
 {
   "name": "json-data-view-react",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "A react component to visualize json data",
   "author": "uriegel",
   "license": "MIT",

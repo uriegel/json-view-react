@@ -1,4 +1,5 @@
-import React, { DataProps } from "."
+import React from "react"
+import { DataProps } from "."
 
 export const ValueView = ({data, keyName}: DataProps) => (
     <div>
@@ -8,4 +9,5 @@ export const ValueView = ({data, keyName}: DataProps) => (
         <span>{typeof data == "string" ? `"${data}"` : data}</span>
     </div>    
 )
+
 
