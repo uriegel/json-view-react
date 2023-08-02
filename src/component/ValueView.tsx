@@ -6,7 +6,7 @@ export const ValueView = ({data, keyName}: DataProps) => (
         <div className={`jvr--node jvr--invisible`}></div>
         <span>{keyName}</span>       
         <span>: </span>
-        <span>{typeof data == "string" ? `"${data}"` : data}</span>
+        <span>{typeof data == "string" ? `"${data}"` : `${data}`}</span>
     </div>    
 )
 

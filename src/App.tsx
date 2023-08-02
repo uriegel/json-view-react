@@ -5,6 +5,8 @@ const jason = {
 	name: "Uwe Riegel",
 	a: "A",
 	count: 123,
+    isWahr: true,
+    idFalsch: false,
 	objekt: {
 		nummer: 8908998,
         users: [
